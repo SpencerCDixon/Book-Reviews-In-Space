@@ -7,3 +7,12 @@
 <% if current_user %>
   <%= link_to 'Profile', user_path(current_user) %>
 <% end -%>
+
+<h1>All Book Listings:</h1>
+
+<ul>
+<% @books.each do |book| %>
+  <li> <%= book.user.email %> Listed: <%= book.title %> - <%= book.description %></li>
+<% end -%>
+</ul>
+
