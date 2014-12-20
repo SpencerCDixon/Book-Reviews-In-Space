@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capybara'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'valid_attribute'
   gem 'launchy'
 end
 
