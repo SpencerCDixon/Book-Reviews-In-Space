@@ -13,5 +13,10 @@ feature 'user deletes account' do
     expect(page).to have_content('Account deleted.')
   end
 
-  scenario 'unathenticated user cannot delete account'
+  scenario 'unathenticated user cannot delete account' do
+    user = FactoryGirl.create(:user)
+
+    visit user_path(user)
+    expect(page).to_not have_content('Delete Account')
+  end
 end
