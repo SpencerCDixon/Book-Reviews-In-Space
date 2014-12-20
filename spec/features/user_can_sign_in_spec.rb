@@ -2,7 +2,6 @@ require 'rails_helper'
 
 
 feature 'user can sign in to the app' do
-  
   scenario 'user provides valid login' do
     user = FactoryGirl.create(:user)
     visit new_user_session_path

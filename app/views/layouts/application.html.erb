@@ -13,12 +13,15 @@
 
   <body>
 
-
-    <%= notice %>
-    <%= alert %>
-
-
     <div class="row">
+      <% if flash.any? %>
+        <% flash.each do |key, message| %>
+          <div class="alert-box <%= key %>">
+            <%= message %>
+          </div>
+        <% end -%>
+      <% end -%>
+
       <%= yield %>
     </div>
 
