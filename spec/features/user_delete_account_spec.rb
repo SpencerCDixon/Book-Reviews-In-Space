@@ -6,7 +6,11 @@ feature 'user deletes account' do
     user = FactoryGirl.create(:user)
 
     sign_in_as(user)
-    expect(page).to have_content('Signed in successfully')
+
+    visit user_path(user)
+    click_link 'Delete Account'
+
+    expect(page).to have_content('Account deleted.')
   end
 
   scenario 'unathenticated user cannot delete account'

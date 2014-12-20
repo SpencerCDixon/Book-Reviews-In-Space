@@ -16,5 +16,15 @@ feature 'user can sign in to the app' do
     expect(page).to have_content('Books In Space')
   end
 
+  scenario 'user provides invalid login' do
+    visit new_user_session_path
+
+    click_button 'Log in'
+    
+    expect(page).to have_content('Invalid email or password')
+    expect(page).to_not have_content('Sign Out')
+
+  end
+
 
 end

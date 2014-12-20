@@ -1,0 +1,12 @@
+class UsersController < ApplicationController
+  def show
+    @user = User.find(current_user.id)
+  end
+
+  def destroy
+    @user = User.find(current_user.id)
+    @user.destroy
+    flash[:notice] = 'Account deleted.'
+    redirect_to root_path
+  end
+end
