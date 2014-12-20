@@ -11,3 +11,18 @@
 
   <%= f.submit "Update", class: "button tiny success" %>
 <% end -%>
+
+
+<%= form_for [@user, @book] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :URL %>
+  <%= f.text_field :URL %>
+
+  <%= f.submit "List Book", class: "button tiny success" %>
+<% end -%>
+
