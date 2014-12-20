@@ -12,6 +12,12 @@ feature 'user registers' do
     click_button 'Sign up'
     expect(page).to have_content('Welcome! You have signed up successfully')
   end
-  scenario 'provide invalid registration information'
+  scenario 'provide invalid registration information' do
+    visit new_user_registration_path
+
+    click_button 'Sign up'
+    expect(page).to_not have_content('Sign out')
+    expect(page).to have_content('Sign up')
+  end
 end
 
