@@ -10,9 +10,20 @@
 
 <h1>All Book Listings:</h1>
 
-<ul>
-<% @books.each do |book| %>
-  <li> <%= book.user.email %> Listed: <%= book.title %> - <%= book.description %></li>
-<% end -%>
-</ul>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>URL</th>
+  </tr>
+  <% @books.each do |b| %>
+    <tr>
+      <td><%= b.user.email %></td>
+      <td><%= b.title %></td>
+      <td><%= b.description %></td>
+      <td><%= b.URL %></td>
+    </tr>
+  <% end -%>
+</table>
 
