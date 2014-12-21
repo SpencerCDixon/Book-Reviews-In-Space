@@ -20,7 +20,7 @@
   <% @books.each do |b| %>
     <tr>
       <td><%= b.user.email %></td>
-      <td><%= b.title %></td>
+      <td> <%= link_to b.title, book_path(b) %></td>
       <td><%= b.description %></td>
       <td><%= b.URL %></td>
     </tr>
