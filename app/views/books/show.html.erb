@@ -13,3 +13,10 @@
     <td> <%= @book.URL %></td>
   </tr>
 </table>
+
+<%= form_for [@book, @review] do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Review book", class: "button tiny success" %>
+<% end -%>
