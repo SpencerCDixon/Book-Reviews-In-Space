@@ -11,8 +11,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:format])
-    @review = Review.new
+    @book = Book.find(params[:id])
   end
 
   private

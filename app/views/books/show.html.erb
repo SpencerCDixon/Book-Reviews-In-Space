@@ -1,11 +1,9 @@
-<h1>This Book:</h1>
-
-
+<h1><%= @book.title %></h1>
 <table>
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Review</th>
+    <th>URL</th>
   </tr>
   <tr>
     <td> <%= @book.title %></td>
@@ -14,9 +12,4 @@
   </tr>
 </table>
 
-<%= form_for [@book, @review] do |f| %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.submit "Review book", class: "button tiny success" %>
-<% end -%>
+<h2>Reviews: </h2>
