@@ -1,11 +1,9 @@
-<h1>This Book:</h1>
-
-
+<h1><%= @book.title %></h1>
 <table>
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Review</th>
+    <th>URL</th>
   </tr>
   <tr>
     <td> <%= @book.title %></td>
@@ -13,3 +11,5 @@
     <td> <%= @book.URL %></td>
   </tr>
 </table>
+
+<h2>Reviews: </h2>

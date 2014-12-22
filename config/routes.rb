@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :destroy, :update] do
     resources :books, only: [:new, :create]
   end
-  resource :book, only: [:show]
+
+  resources :books, only: :show
+
+  resources :books do
+    resources :reviews
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   #
   # See how all your routes lay out with "rake routes".
