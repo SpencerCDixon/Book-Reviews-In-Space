@@ -16,6 +16,12 @@ class BooksController < ApplicationController
     @review = Review.new
   end
 
+  def destroy
+    @book = Book.find(params[:book_id])
+    @book.destroy
+    redirect_to root_path
+  end
+
   private
   def book_params
     params.require(:book).permit(:title, :description, :URL)

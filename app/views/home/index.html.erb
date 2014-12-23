@@ -16,6 +16,9 @@
     <th>Title</th>
     <th>Description</th>
     <th>URL</th>
+    <% if current_user %>
+      <th>Delete Book</th>
+    <% end -%>
   </tr>
   <% @books.each do |b| %>
     <tr>
@@ -23,6 +26,7 @@
       <td> <%= link_to b.title, book_path(b) %></td>
       <td><%= b.description %></td>
       <td><%= b.URL %></td>
+      <td><%= link_to 'Delete Book', user_book_path(current_user, b), method: :delete, class: "button tiny warning" %></td>
     </tr>
   <% end -%>
 </table>
