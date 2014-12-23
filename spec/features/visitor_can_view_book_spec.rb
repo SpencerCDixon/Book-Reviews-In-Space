@@ -9,5 +9,12 @@ feature 'visitor can see a books details in-depth' do
     expect(page).to have_content(book.title)
     expect(page).to have_content(book.URL)
   end
+
+  # scenario 'visitor can see books reviews' do
+  #   book = FactoryGirl.create(:book)
+  #   visit book_path(book)
+  #
+  #   expect(page).to have_content(book.reviews.first.description)
+  # end
 end
 
