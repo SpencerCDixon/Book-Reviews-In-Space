@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :books, only: :show
 
-  resources :books do
+  resources :books, only: [] do
     resources :reviews
   end
   # The priority is based upon order of creation: first created -> highest priority.

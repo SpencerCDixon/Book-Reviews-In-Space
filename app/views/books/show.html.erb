@@ -12,4 +12,12 @@
   </tr>
 </table>
 
+<%= link_to 'Write Review', new_book_review_path(@book)  %>
+
 <h2>Reviews: </h2>
+
+<ul>
+<% @reviews.each do |review| %>
+  <li> <%= review.description %> </li>
+<% end -%>
+</ul>

@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20141221034647) do
   end
 
   create_table "reviews", force: true do |t|
-    t.text     "description"
-    t.integer  "book_id"
-    t.integer  "user_id"
+    t.text     "description", null: false
+    t.integer  "book_id",     null: false
+    t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
